@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                git 'https://github.com/selma23042/Jenkins_HelloWorld.git'
+                git 'https://github.comselma23042/ton-repo.git'
             }
         }
         stage('Compile') {
