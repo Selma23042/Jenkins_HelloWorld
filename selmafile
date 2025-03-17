@@ -1,0 +1,27 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('Checkout') {
+            steps {
+                git 'https://github.com/ton-utilisateur/ton-repo.git'
+            }
+        }
+        stage('Test Command') {
+            steps {
+                script {
+                    // Test simple : Afficher un message dans la console
+                    sh 'echo "Jenkins Pipeline Test OK"'
+                }
+            }
+        }
+        stage('List Files') {
+            steps {
+                script {
+                    // Lister les fichiers du workspace Jenkins
+                    sh 'ls -l'
+                }
+            }
+        }
+    }
+}
